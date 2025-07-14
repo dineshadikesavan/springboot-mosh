@@ -1,7 +1,5 @@
 package com.tsc.demo.service;
 
-import org.springframework.stereotype.Service;
-
 //@Service("klarna")
 public class KlarnaPaymentService implements PaymentService {
 

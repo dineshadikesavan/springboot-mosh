@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: demo
+    enabled: true
+    timeout: 1000
+  datasource:
+    url: jdbc:mysql://localhost:3306/my_schema?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Born2win@chennai1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+stripe:
+  apiUrl: https://stripe.com
+  timeout: 1000
+  enabled: true
+  supported-currencies: USD,EUR,GBP
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: [health,actuator,info,beans,caches]
